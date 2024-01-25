@@ -541,3 +541,11 @@ p.card-bio {
 .message-404 .form-inline input {
   flex: 1;
 }
+
+.fas fa-heart {
+  border: none;
+}
+
+#like-heart {
+  color: red;
+}
