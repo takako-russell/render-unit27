@@ -4,7 +4,7 @@ from flask import Flask, render_template,request, flash, redirect, session,abort
 from flask_debugtoolbar import DebugToolbarExtension
 from sqlalchemy.exc import IntegrityError
 from flask_bcrypt import Bcrypt
-from flask_login import current_user
+# from flask_login import current_user
 
 from forms import UserAddForm, LoginForm, MessageForm,UserEditForm
 from models import db, connect_db, User, Message,Likes
