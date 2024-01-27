@@ -10,7 +10,7 @@ os.environ['DATABASE_URL'] = "postgresql:///warbler-test"
 
 from app import app, CURR_USER_KEY
 
-db.create_all()
+# db.create_all()
 
 
 app.config['WTF_CSRF_ENABLED'] = False
@@ -23,6 +23,9 @@ class MessageModelTests(TestCase):
     def setUp(self):
         """Create test client, add sample data."""
 
+        with app.app_context():
+            db.create_all()
+            
         User.query.delete()
         Message.query.delete()
 
