@@ -34,10 +34,10 @@ from app import app, CURR_USER_KEY
 
 app.config['WTF_CSRF_ENABLED'] = False
 
-# def tearDown(self):
-#         with self.app.app_context():
-#             db.session.remove()
-#             db.drop_all()
+def tearDown(self):
+        with self.app.app_context():
+            db.session.remove()
+            db.drop_all()
 
 
 def load_user(user_id):
@@ -50,10 +50,10 @@ class MessageViewTestCase(TestCase):
     def setUp(self):
         """Create test client, add sample data."""
         
-        db.session.rollback()
+        db.create_all()
         
-        with app.app_context():
-            db.create_all()
+        # with app.app_context():
+        #     db.create_all()
         
         User.query.delete()
         Message.query.delete()

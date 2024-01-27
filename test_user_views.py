@@ -4,7 +4,6 @@ from flask import url_for,g
 from models import db, Message, User
 
 
-
 os.environ['DATABASE_URL'] = "postgresql:///warbler-test"
 
 from app import app, CURR_USER_KEY
@@ -17,10 +16,11 @@ class UserViewTestCase(TestCase):
 
     def setUp(self):
         """Create test client, add sample data."""
-        db.session.rollback()
+        db.create_all()
+        # db.session.rollback()
         
-        with app.app_context():
-            db.create_all()
+        # with app.app_context():
+        #     db.create_all()
         
         User.query.delete()
         Message.query.delete()

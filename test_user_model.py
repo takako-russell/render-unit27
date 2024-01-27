@@ -39,10 +39,11 @@ class UserModelTestCase(TestCase):
 
     def setUp(self):
         """Create test client, add sample data."""
-        db.session.rollback()
+        db.create_all()
+        # db.session.rollback()
         
-        with app.app_context():
-            db.create_all()
+        # with app.app_context():
+        #     db.create_all()
         
         User.query.delete()
         Message.query.delete()
