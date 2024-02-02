@@ -9,14 +9,18 @@ Faker==0.9.1
 Flask==1.0.2
 Flask-Bcrypt==0.7.1
 Flask-DebugToolbar==0.10.1
+Flask-Login==0.6.3
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
+gunicorn==21.2.0
+importlib-metadata==7.0.1
 ipython==7.0.1
 ipython-genutils==0.2.0
 itsdangerous==0.24
 jedi==0.13.1
 Jinja2==2.10
 MarkupSafe==1.1.1
+packaging==23.2
 parso==0.3.1
 pexpect==4.6.0
 pickleshare==0.7.5
@@ -34,3 +38,4 @@ traitlets==4.3.2
 wcwidth==0.1.7
 Werkzeug==0.14.1
 WTForms==2.2.1
+zipp==3.17.0
